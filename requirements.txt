@@ -5,6 +5,3 @@ urllib2
 numpy
 pandas
 streamlit
-Werkzeug
-urllib.request
-urllib.error
