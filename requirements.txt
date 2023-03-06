@@ -1,7 +1,6 @@
 scikit-learn
 plotly-express
 matplotlib
-urllib2
 numpy
 pandas
 streamlit
