@@ -6,12 +6,10 @@ import pandas as pd
 import numpy as np
 import pydeck as pdk
 import plotly.express as px 
-import requests
-from io import StringIO
-file_url = "https://drive.google.com/uc?id=1Q7_Seerl4Da2k3pDw9bOXH91vLe44wrc"
-file_id = file_url.split("=")[-1]
-csv_url = f"https://drive.google.com/uc?id={1Q7_Seerl4Da2k3pDw9bOXH91vLe44wrc}&export=download"
-content = requests.get(csv_url).text
+import gdown
+url = "https://drive.google.com/uc?id=1Q7_Seerl4Da2k3pDw9bOXH91vLe44wrc"
+output = "motor.csv" # replace with the name you want for your CSV file
+gdown.download(url, output, quiet=False)
 
 
 
@@ -40,7 +38,7 @@ st.markdown(hide_default_format, unsafe_allow_html=True)
 # Using st.cache to store df in cache
 @st.cache_data(persist=True)
 def load_data(nrows):
-    data = pd.read_csv(StringIO(content), nrows=nrows, parse_dates=[['CRASH_DATE', 'CRASH_TIME']])
+    data = pd.read_csv(output, nrows=nrows, parse_dates=[['CRASH_DATE', 'CRASH_TIME']])
     data.dropna(subset=['LATITUDE', 'LONGITUDE'], inplace=True)
     lowercase =lambda x: str(x).lower()
     data.rename(lowercase, axis='columns', inplace=True)
