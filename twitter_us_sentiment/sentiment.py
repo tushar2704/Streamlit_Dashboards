@@ -98,7 +98,7 @@ if not st.sidebar.checkbox("Close", True, key='4'):
     df_1= df[df['airline_sentiment']==word_sentiment]
     words = " ".join(df_1['text'])
     process_word = ' '.join( [word for word in words.split() if "http" not in word and not word.startswith("@") and word !="RT"])
-    wordcloud =WordCloud(stopwords =STOPWORDS, background_color='white', heigth=640, width=800).generate(process_word)
+    wordcloud =WordCloud(stopwords =STOPWORDS, background_color='white').generate(process_word)
     plt.imshow()
     st.pyplot(wordcloud)
 
