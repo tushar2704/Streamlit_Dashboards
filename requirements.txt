@@ -5,3 +5,5 @@ numpy
 pandas
 streamlit
 gdown
+wordcloud
+plotly
