@@ -99,10 +99,10 @@ if not st.sidebar.checkbox("Close", True, key='4'):
     words = " ".join(df_1['text'])
     process_word = ' '.join( [word for word in words.split() if "http" not in word and not word.startswith("@") and word !="RT"])
     wordcloud =WordCloud(stopwords =STOPWORDS, background_color='white').generate(process_word)
-    plt.imshow()
+  
     st.pyplot(wordcloud)
 
-
+st.sidebar.markdown("_______________")
 
 
 
