@@ -13,7 +13,8 @@ gdown.download(url, output, quiet=False)
 
 
 
-
+with open('style.css') as f:
+    st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
 
 st.set_page_config(layout="wide",page_title="Motor Vehicle Collision Reports(NYC🗽) by Tushar Aggarwal")
 #image_url = "https://drive.google.com/file/d/1fOIQqwMzZowohCg5rjDv4AnSjHWWwE2P/uc?usp=sharing"
