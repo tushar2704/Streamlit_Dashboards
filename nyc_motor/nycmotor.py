@@ -121,7 +121,8 @@ if st.checkbox("Show me Raw data", False):
 ########
 
 # Generate embed code
-    embed_code = streamlit_embedcode.get_embed_code(hash_func=None, width=800, height=600)
+    # Generate embed code
+    embed_code = get_embed_code(hash_func=None, width=800, height=600)
 
     # Display embed code
     st.markdown(embed_code, unsafe_allow_html=True)
