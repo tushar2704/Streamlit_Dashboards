@@ -7,3 +7,4 @@ streamlit
 gdown
 wordcloud
 plotly
+streamlit_embedcode
