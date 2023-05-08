@@ -8,3 +8,4 @@ gdown
 wordcloud
 plotly
 streamlit_embedcode
+streamlit_embedcode
