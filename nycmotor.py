@@ -7,6 +7,7 @@ import numpy as np
 import pydeck as pdk
 import plotly.express as px 
 import gdown
+import streamlit_embedcode
 url = "https://drive.google.com/uc?id=1Q7_Seerl4Da2k3pDw9bOXH91vLe44wrc"
 output = "motor.csv" # replace with the name you want for your CSV file
 gdown.download(url, output, quiet=False)
@@ -119,6 +120,7 @@ if st.checkbox("Show me Raw data", False):
 
 ########
 
-
+embed_code = streamlit_embedcode.get_embed_code(hash_func=None, width=800, height=600)
+st.markdown(embed_code, unsafe_allow_html=True)
 ##########################################END######################################################################
 
