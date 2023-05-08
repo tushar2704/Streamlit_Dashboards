@@ -4,7 +4,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-import streamlit_embedcode
+
 import pydeck as pdk
 import plotly.express as px 
 
@@ -121,10 +121,6 @@ if st.checkbox("Show me Raw data", False):
 ########
 
 # Generate embed code
-    # Generate embed code
-    embed_code = get_embed_code(hash_func=None, width=800, height=600)
 
-    # Display embed code
-    st.markdown(embed_code, unsafe_allow_html=True)
 ##########################################END######################################################################
 
